@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c7tihsnsp2io7"]
+
+[ext_resource type="Texture2D" uid="uid://dipjy04cx04fy" path="res://FROGLET_16x16_Sprite/green/PNG/froglet_frog_green_sheet_all.png" id="1_4tl7q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r13a2"]
+atlas = ExtResource("1_4tl7q")
+region = Rect2(0, 18, 17, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kx5h3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r13a2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mecyt"]
+size = Vector2(13, 10)
+
+[node name="forg" type="CharacterBody2D" unique_id=261005204]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1346974482]
+sprite_frames = SubResource("SpriteFrames_kx5h3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778128877]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_mecyt")
